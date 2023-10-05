@@ -1,7 +1,7 @@
 # Web Ranker
 
 (PT-BR)
-Esse é um Web Crawler escrito em Python, utilizando o framework Django. O _app_ faz o _scrape_ das páginas procurando por _links_ e acessando-os, repetindo o processo em até 5 níveis. O _scraping_ é feito por uma [API]() criada separadamente, que também _rankeia_ os resultados no final utilizando [TF-IDF](https://towardsdatascience.com/tf-idf-for-document-ranking-from-scratch-in-python-on-real-world-dataset-796d339a4089) simples utilizando a biblioteca [`Sklearn`](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfVectorizer.html).
+Esse é um Web Crawler escrito em Python, utilizando o framework Django. O _app_ faz o _scrape_ das páginas procurando por _links_ e acessando-os, repetindo o processo em até 5 níveis. O _scraping_ é feito por uma [API](https://github.com/jotapesp/crawler_webapp/blob/main/API.md) criada separadamente, que também _rankeia_ os resultados no final utilizando [TF-IDF](https://towardsdatascience.com/tf-idf-for-document-ranking-from-scratch-in-python-on-real-world-dataset-796d339a4089) simples utilizando a biblioteca [`Sklearn`](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfVectorizer.html).
 
 ### Feito com
 
@@ -14,7 +14,7 @@ Esse é um Web Crawler escrito em Python, utilizando o framework Django. O _app_
 * Faça o download dos arquivos um por um em um mesmo diretório ou clone o repositório utilizando o comando:
   >`git clone https://github.com/jotapesp/pong-game.git`
 
-* Faça a instalação das dependências listadas em [`requirements.txt`](https://github.com/jotapesp/pong-game/blob/main/requirements.txt) manualmente ou utilize o comando:
+* Faça a instalação das dependências listadas em [`requirements.txt`](https://github.com/jotapesp/crawler_webapp/blob/main/requirements.txt) manualmente ou utilize o comando:
   >`pip install -r requirements.txt`
 
 * Para rodar o app, siga as instruções em Como Usar.
@@ -34,4 +34,4 @@ Esse é um Web Crawler escrito em Python, utilizando o framework Django. O _app_
 ### Web Crawling
 
 * O processo de crawling e scraping é feito por uma API desenvolvida a parte localizada em `catalog/scraper.py`
-* A documentação da API é encontrada abaixo
+* A documentação da API é encontrada [aqui](https://github.com/jotapesp/crawler_webapp/blob/main/API.md)
