@@ -12,7 +12,7 @@ Esse é um Web Crawler escrito em Python, utilizando o framework Django. O _app_
 
 (PT-BR)
 * Faça o download dos arquivos um por um em um mesmo diretório ou clone o repositório utilizando o comando:
-  >`git clone https://github.com/jotapesp/pong-game.git`
+  >`git clone https://github.com/jotapesp/crawler_webapp.git`
 
 * Faça a instalação das dependências listadas em [`requirements.txt`](https://github.com/jotapesp/crawler_webapp/blob/main/requirements.txt) manualmente ou utilize o comando:
   >`pip install -r requirements.txt`
@@ -28,7 +28,7 @@ Esse é um Web Crawler escrito em Python, utilizando o framework Django. O _app_
     > `python3 manage.py runserver`
 
 * Abra um navegador web de sua preferência e pela barra de endereços, acesse a URL: `http://127.0.0.1:8000/`.
-* Na barra encontrada na homepage, entre o link pelo qual deseja iniciar o Web Crawling e clique em `Começar`.
+* Na barra de URL encontrada na homepage, entre o URL pelo qual deseja iniciar o Web Crawling e clique em `Começar`.
 * O processo de crawling se dará início e pode levar alguns minutos dependendo da quantidade de links encontrada.
 
 ### Web Crawling
