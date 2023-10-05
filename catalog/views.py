@@ -41,7 +41,7 @@ def home(request):
     message = """O processo pode levar alguns segundos ou até minutos
 dependendo da quantidade de links encontrados nas páginas, desse modo, a página permanecerá
 irresposiva durante esse período. Peço que tenha paciência e adianto que
-estamos trabalhando para tornar o processo mais rápido."""
+estou trabalhando para tornar o processo mais rápido."""
 
     context = {
         'links_list': links_list,

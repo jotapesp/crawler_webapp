@@ -398,7 +398,7 @@ class Crawler:
         tam attribute defines how many results to be returned
         '''
         sorted_ranks = sorted(self.ranks.items(), key=lambda x: x[1], reverse=True)
-        if tam = -1:
+        if tam == -1:
             return sorted_ranks
         return sorted_ranks[:tam + 1]
 
