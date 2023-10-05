@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+<br>
+<br>
+<h5>Páginas visitadas recentemente:</h5>
+<ul>
+  {% if links_list %}
+    {% for link in links_list %}
+    <li>{% if link.title %}<strong>{{ link.title }}:</strong>{% endif %} {{ link.url }} - acessado {{ link.date|date:"d/m/Y" }} às {{ link.date|time:"H:i" }}</li>
+    {% endfor %}
+  {% else %}
+    <li>Você ainda não enviou nenhuma URL</li>
+  {% endif %}
+</ul>
+{% endblock %}

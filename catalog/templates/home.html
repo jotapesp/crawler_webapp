@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Web Ranker</h1>
+  {% load static %}
+  <img src="{% static 'images/logo.png' %}" class="center" title="Logo image: an upside-down G">
+  <p>
+    Web Ranker desenvolvido por
+    <em>Jotapesp</em>!
+  </p>
+  <form action="" method="POST">
+    {% csrf_token %}
+    <table align="center">
+      {{ form.as_table }}
+    </table>
+    <input type="submit" value="Começar">
+  </form>
+  {% if not request.POST %}
+  <hr>
+  <h6>
+    <strong>ATENÇÃO: </strong>{{ attention_message }}
+  </h6>
+  <hr>
+  {% endif %}
+  {% if retrieved_urls %}
+  <br>
+  <h3>{% if total_pages == -1 %}Todas as{% else %}As {{ total_pages }}{% endif %} páginas retornadas:</h3>
+  <ul>
+    <table>
+    {% for vals in retrieved_urls %}
+    <tr>
+      <li><a href='{{ vals.1 }}'>{% if vals.0 %}{{ vals.0 }}{% else %}{{ vals.1 }}{% endif %}</a></li>
+    </tr>
+    <tr>
+      {% if vals.2 %}<p>{{ vals.2|slice:":300"}}...</p>{% else %}<p>Sem prévia</p>{% endif %}
+    </tr>
+      <hr>
+    {% endfor %}
+    </table>
+  {% else %}
+    {% if request.POST %}
+    <h3>Nenhum link encontrado.</h3>
+    {% endif %}
+  {% endif %}
+  </ul>
+  <h5>Páginas visitadas recentemente:</h5>
+  <ul>
+    {% if links_list %}
+      {% for link in links_list %}
+      <li>{% if link.title %}<strong>{{ link.title }}:</strong>{% endif %} {{ link.url }} - acessado {{ link.date|date:"d/m/Y" }} às {{ link.date|time:"H:i" }}</li>
+      {% endfor %}
+    {% else %}
+      <li>Você ainda não enviou nenhuma URL</li>
+    {% endif %}
+  </ul>
+{% endblock %}
